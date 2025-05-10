@@ -24,13 +24,6 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
             <slot />
           </main>
         </div>
-<script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-    Chatbot.init({
-        chatflowid: "3a4e5482-45ec-48ff-8160-09224c7a23a7",
-        apiHost: "https://wgayo-elai25.hf.space",
-    })
-</script>
         <Footer />
       </div>
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
