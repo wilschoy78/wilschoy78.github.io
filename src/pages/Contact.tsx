@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Github, Linkedin, Twitter, Facebook } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { emailjsConfig } from '../config/emailjs';
+import type { EmailTemplateParams } from '../config/emailjs';
 
 interface ContactForm {
   name: string;
@@ -41,6 +44,11 @@ export const Contact: React.FC = () => {
       name: 'GitHub',
       url: 'https://github.com/wilschoy78',
       icon: <Github className="h-5 w-5" />
+    },
+    {
+      name: 'Facebook',
+      url: 'https://www.facebook.com/wilsongayo',
+      icon: <Facebook className="h-5 w-5" />
     },
     {
       name: 'LinkedIn',
@@ -110,13 +118,38 @@ export const Contact: React.FC = () => {
     setSubmitStatus('idle');
 
     try {
-      // Simulate form submission (replace with actual EmailJS or backend integration)
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // For demo purposes, we'll always show success
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch {
+      // Check if EmailJS is configured
+      if (emailjsConfig.serviceId === 'YOUR_SERVICE_ID' || 
+          emailjsConfig.templateId === 'YOUR_TEMPLATE_ID' || 
+          emailjsConfig.publicKey === 'YOUR_PUBLIC_KEY') {
+        throw new Error('EmailJS is not configured. Please update the configuration in src/config/emailjs.ts');
+      }
+
+      // Prepare template parameters for EmailJS
+      const templateParams: EmailTemplateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: contactInfo.email, // Your email address
+      };
+
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        templateParams,
+        emailjsConfig.publicKey
+      );
+
+      if (response.status === 200) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

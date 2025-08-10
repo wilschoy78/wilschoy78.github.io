@@ -20,8 +20,9 @@ export const About: React.FC = () => {
     phone: '0917-6203908',
     emails: [
       'wilschoy78@gmail.com',
+      'wilson@questnova.com',
       'wilson.gayo@questnova.com',
-      'wgayo@uc-bcf.edu.ph'
+      'wgayo@uc.edu.ph'
     ]
   };
 

@@ -171,7 +171,7 @@ export const Skills: React.FC = () => {
                 <div className="bg-blue-100 p-4 rounded-full mb-4">
                   <Code className="h-8 w-8 text-blue-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">5+</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">20+</h3>
                 <p className="text-gray-600">Years of Experience</p>
               </div>
               <div className="flex flex-col items-center">
