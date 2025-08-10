@@ -1,7 +1,5 @@
 # TODO:
 
-- [x] run-build-check: Run npm run build to identify compilation errors and TypeScript issues (priority: High)
-- [x] fix-compilation-errors: Fix any TypeScript compilation errors found during build (priority: High)
-- [x] test-final-build: Run final build test to ensure all errors are resolved (priority: Medium)
-- [x] check-dev-server-errors: Check and fix any development server errors (priority: Medium)
-- [x] verify-imports: Verify all imports are correct and dependencies are installed (priority: Medium)
+- [ ] replace-profile-image: Replace the current profile.jpg in public directory with the user's correct profile picture from the attached image (**IN PROGRESS**) (priority: High)
+- [ ] explain-deployment-process: Explain to the user how local edits automatically deploy online through GitHub Actions (priority: Medium)
+- [ ] test-new-profile-image: Verify the new profile image displays correctly on both Home and About pages (priority: Medium)

@@ -152,7 +152,7 @@ export const Home: React.FC = () => {
               <div className="w-full max-w-md mx-auto">
                 <div className="relative">
                   <img 
-                    src="https://wilschoy78.github.io/_astro/astro_profile_Z2cPphk.webp" 
+                    src="/profile.jpg" 
                     alt="Wilson Gayo" 
                     className="w-80 h-80 rounded-full mx-auto object-cover shadow-2xl border-8 border-white"
                   />

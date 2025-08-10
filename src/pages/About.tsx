@@ -96,7 +96,7 @@ export const About: React.FC = () => {
             {/* Profile Photo */}
             <div className="mb-8">
               <img 
-                src="https://wilschoy78.github.io/_astro/astro_profile_Z2cPphk.webp" 
+                src="/profile.jpg" 
                 alt="Wilson A. Gayo" 
                 className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover shadow-lg border-4 border-white"
               />

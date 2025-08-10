@@ -7,13 +7,13 @@ import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
 const socialLinks = [
   { name: 'GitHub', url: 'https://github.com/wilschoy78', icon: 'github' },
   { name: 'LinkedIn', url: 'https://linkedin.com/in/wilson-gayo', icon: 'linkedin' },
-  { name: 'Twitter', url: 'https://twitter.com/wilsongayo', icon: 'twitter' },
-  { name: 'Email', url: 'mailto:wilson.gayo@example.com', icon: 'mail' }
+  { name: 'Twitter', url: 'https://x.com/wilsongayo', icon: 'twitter' },
+  { name: 'Email', url: 'mailto:wilson@questnova.com', icon: 'mail' }
 ];
 
 const contactInfo = {
-  email: 'wilson.gayo@example.com',
-  location: 'Remote / Available Worldwide',
+  email: 'wilson@questnova.com',
+  location: 'Cebu, Philippines',
   availability: 'Available for freelance projects',
   responseTime: 'Usually responds within 24 hours'
 };
@@ -104,7 +104,7 @@ export const Footer: React.FC = () => {
         <div className="border-t border-gray-800 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-sm text-gray-400">
-              <span>&copy; {currentYear} Wilson Gayo. All rights reserved.</span>
+              <span>&copy; 2005 - {currentYear} Wilson Gayo. All rights reserved.</span>
             </div>
             
             <div className="flex items-center space-x-2 text-sm text-gray-400">

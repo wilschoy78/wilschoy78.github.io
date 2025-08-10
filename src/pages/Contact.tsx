@@ -30,9 +30,9 @@ export const Contact: React.FC = () => {
 
   // Contact information
   const contactInfo = {
-    email: 'hello@wilschoy.dev',
-    phone: '+1 (555) 123-4567',
-    location: 'San Francisco, CA'
+    email: 'wilson@questnova.com',
+    phone: '+63 917-6203908',
+    location: 'Cebu, Philippines'
   };
 
   // Social links
@@ -48,8 +48,8 @@ export const Contact: React.FC = () => {
       icon: <Linkedin className="h-5 w-5" />
     },
     {
-      name: 'Twitter',
-      url: 'https://twitter.com/wilschoy',
+      name: 'X',
+      url: 'https://x.com/wilsongayo',
       icon: <Twitter className="h-5 w-5" />
     }
   ];
