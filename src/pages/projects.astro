@@ -1,0 +1,113 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+---
+
+<BaseLayout title = "Projects" sideBarActiveItemID="projects">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Projects Develop</div>
+  </div>
+
+  <HorizontalCard
+    title="EMR Cashier-Supported Inventory and Sales System (2023)"
+    img=""
+    desc="Ditch the time-consuming manual tasks! Enhanced Manual Recording empowers your cashiers with a user-friendly system that automates inventory tracking, order creation, and report generation. Say goodbye to error-prone counts and hello to real-time data, effortless order management, and automated daily reports. This translates to happier cashiers, improved efficiency, and better data-driven decisions, ultimately boosting your business performance. Invest in your cashiers, invest in efficiency, invest in Enhanced Manual Recording."
+    url="https://aabbq.netlify.app/"
+    badge=""
+  />
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="eHub (2022)"
+    img=""
+    desc="Created a dynamic web application dedicated to recording and tracking employee expenses, building upon the foundation of the Subsidiary Ledger System. This upgraded system will empower users to efficiently log and monitor their expenses. By leveraging modern web technologies and a user-friendly interface, employees can easily submit and manage their expense reports. This enhancement will seamlessly integrate with the existing Subsidiary Ledger System, providing a comprehensive solution for managing both financial and expense-related aspects of the organization."
+    badge=""
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Website Development and Implementation"
+    img=""
+    desc="Create a professional website using the WordPress platform. Utilize its user-friendly content management system to easily customize and manage content. Choose a suitable theme, add pages (Home, About, Services, Contact), and enhance functionality with plugins. Optimize for search engines, test for responsiveness, ensure security, and launch the website when ready. Ongoing maintenance includes updates and content additions."
+    badge=""
+  />
+  <div class="mb-5">
+    <div class="text-1xl w-full">Clients</div>
+  </div>
+  <ul class="list-disc md:columns-1 columns-2 mx-6">
+    <li><a target="_blank" href="https://golden-success.com/">Golden Success College</a></li>
+    <li><a target="_blank" href="https://rcgoldline.com/">RC Goldline Saleshop</a></li>
+    <li><a target="_blank" href="https://familyapplianceph.com/">The First Family Appliance</a></li>
+    <li><a target="_blank" href="https://questnova.com/">Questnova Systems Corp</a></li>
+    <li><a target="_blank" href="https://aabbq.org/">AA BBQ</a></li>
+    <li><a target="_blank" href="https://sanroquesubangdaku.org/">San Roque Parish Subangdaku</a></li>
+  </ul>
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="LMS implementation using Moodle"
+    img=""
+    desc="Specializes in the seamless implementation of Learning Management Systems (LMS) utilizing Moodle, a robust open-source platform renowned for its flexibility and extensive features tailored for educational purposes. With a keen focus on customization and user-friendly interface design, our team ensures that institutions and organizations can effortlessly deploy Moodle to enhance their learning environments, streamline course management, facilitate communication, and optimize student engagement. From initial consultation to ongoing support, we are committed to empowering clients with a comprehensive Moodle solution that meets their specific needs and maximizes the potential of online education."
+    badge=""
+  />
+  <div class="mb-5">
+    <div class="text-1xl w-full">Clients</div>
+  </div>
+  <ul class="list-disc md:columns-1 columns-2 mx-6">
+    <li><a target="_blank" href="https://olms.golden-success.com/">OLMS Golden Success College</a></li>
+    <li><a target="_blank" href="https://benedicto.octanity.net/lms/">Benedicto College of Computer Studies LMS</a></li>
+  </ul>
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Inventory and Sales (2006-2010)"
+    img=""
+    desc="Develop an internal web-based system tailored for cell shops, designed to streamline inventory management and sales monitoring. This application will focus on maintaining accurate inventory records and tracking sales, setting sales limits for listing purposes without incorporating full accounting functionalities. The system will be accessible via the internet and deployed with a static IP address to ensure consistent connectivity. Employ a combination of web technologies and user-friendly interfaces to create a seamless experience for cell shop staff, enhancing their efficiency in inventory and sales management tasks."
+    badge=""
+  />
+  <div class="mb-5">
+    <div class="text-1xl w-full">Clients</div>
+  </div>
+  <ul class="list-disc md:columns-1 columns-2 mx-6">
+    <li>Aerophone – 1st owner of the system.</li>
+    <li>RC Goldline / Telco King – 2nd to use with enhancements and their own requirements.</li>
+    <li>JV Shop n Shop – 3rd to use with enhancements and their own requirements. (contract end on 2015)</li>
+    <li>Digital Walker (2015)</li>
+  </ul>
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Aboitiz Food Group Subsidiary Ledger System (AFGSLS) (2006)"
+    img=""
+    desc="Develop an upgraded application aimed at enhancing the capabilities of the current Subsidiary Ledger System (SL version 1). This new version will introduce additional functionalities not present in the original system, with a particular focus on improving processing speed. The transition from the outdated notes system to the Oracle Developer platform will be a central aspect of this upgrade. Utilize a blend of modern technologies and tools to achieve these improvements, ensuring a seamless and efficient transition for a more robust Subsidiary Ledger System."
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Turista (2005)"
+    img=""
+    desc="Develop a comprehensive web-based application for monitoring incoming and outgoing foreigners at Ayala Center Cebu. The system will also involve rewarding tour guides and agencies, along with offering exclusive discounts at specific boutiques within the mall."
+    badge=""
+  />
+
+  <!-- <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
+  </div>
+
+  <HorizontalCard
+    title="Demo Project 3"
+    img="/post_img.webp"
+    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    url="#"
+    badge="FOSS"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Demo Project 4"
+    img="/post_img.webp"
+    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    url="#"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Demo Project 5"
+    img="/post_img.webp"
+    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    url="#"
+  /> -->
+</BaseLayout>

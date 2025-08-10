@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Wilson A. Gayo"
+      subtitle="Name"
+    >
+    </TimeLineElement>
+    <TimeLineElement
+      title="Roosevelt Busay, Cebu City"
+      subtitle="Address"
+    />
+    <TimeLineElement
+      title="0917-6203908"
+      subtitle="Mobile No."
+    />
+    <TimeLineElement
+      title="wilschoy78@gmail.com, wilson@questnova.com, wgayo@uc.edu.ph, wilsongayo@golden-success.com"
+      subtitle="Email"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Masters in Information Technology (CAR Passer 2011) "
+      subtitle="[2008] to [2010] at [Cebu Institute of Technology], [Cebu City], [Philippines]"
+    >
+    Currently enrolled
+    </TimeLineElement>
+    <TimeLineElement
+      title="Bachelor of Science in Computer Science"
+      subtitle="[2002] to [2005] at [University of the Visayas], [Cebu City], [Philippines]"
+    />
+    <TimeLineElement
+      title="High School"
+      subtitle="[1990] to [1994] at [Cebu Eastern College], [Leon Kilat Street, Cebu City], [Philippines]"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Teaching Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Faculty (Part-time) at University of the Visayas in College of Computer Studies"
+      subtitle="From [October 2006] to [March 2011 & June 2014 - 2016], [Main Colon Street, Cebu City], [Philippines]"
+    >
+    </TimeLineElement>
+    <TimeLineElement
+      title="Faculty (Part-time) at Trade-Tech International Science Institute in Information Technology Department"
+      subtitle="From [June 2007] to [March 2010], [Ibabao, Mandaue City], [Philippines]"
+    >
+    </TimeLineElement>
+    <TimeLineElement
+      title="Faculty (Part-time) at Golden Success College in Information Technology Department"
+      subtitle="From [10/01/2011 – 03/31/2014] to [present], [Guadalupe, Cebu City], [Philippines]"
+    >
+    <li>BSIT – Chairperson / Faculty</li>
+    <li>IT System Administrator</li>
+    <li>ISO 9000:2008 (AJA/JAS-ANZ) – Document Control Officer</li>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Faculty (Full-time[Probationary]) at University of Cebu - Main in College of Computer Studies"
+      subtitle="From [8/22/2022] to [present], [Colon Street, Cebu City], [Philippines]"
+    >
+    </TimeLineElement>
+    <TimeLineElement
+      title="Faculty (Full-time[Probationary]) at Benedicto College - Mandaue in College of Computer Studies"
+      subtitle="From [8/22/2022] to [present], [Colon Street, Cebu City], [Philippines]"
+    >
+    <div class="mb-5">
+      <div class="text-2xl w-full">Subjects Handled</div>
+    </div>
+    <li>Data Structures & ALgorithm (Java)</li>
+    <li>Object Oriented Programming (Java)</li>
+    <li>Computer Programming 2 (Intro to Java)</li>
+    <li>Integrative Programming Technologies (REST API using NodeJS / Typescript)</li>
+    <li>Database Management 2 (MySQL)</li>
+    <li>Fundamentals of Artificial Intelligence (Google Colab | Python | Langchain)</li>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Industry Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Software Developer at Summit Multi Systems Sales & Services Corporation"
+      subtitle="From [10/16/2005] to [12/31/2006], [Cebu City], [Philippines]"
+    >
+    </TimeLineElement>
+    <TimeLineElement
+      title="Software Developer at Questnova Systems Corporation"
+      subtitle="From [01/01/2007] to [present], [Mandaue City], [Philippines]"
+    >
+      Design and create web-based application systems, including inventories, payroll systems, reservations, and more. Proficient in a variety of languages and tools, such as Java 5-8, J2EE, JSP 2.0, CSS, Servlet 2.4, Hibernate 3.*, XML, and JavaBeans.    </TimeLineElement>
+    <TimeLineElement
+      title="Software Engineer at Web Ninja Technologies Services"
+      subtitle="From [2019] to [2022], [Lapu-Lapu City], [Philippines]"
+    >
+    Create robust and dynamic web-based applications that encompass a range of functionalities, including inventories, payroll systems, reservation systems, and more. Employing modern technologies, the backend development will leverage REST APIs using Node.js and Express.js, seamlessly interacting with MongoDB using the Mongoose ORM for efficient data management.
+
+    On the frontend, build engaging and responsive user interfaces using Angular, ensuring a smooth and intuitive experience for users interacting with the applications through web browsers.
+    
+    In addition to web development, extend your capabilities to mobile platforms. Utilize native development frameworks such as Kotlin for Android and Swift for iOS to craft mobile applications that perfectly complement the web-based systems. This comprehensive approach ensures seamless integration between the different platforms, enabling users to access and utilize the functionalities from both web and mobile environments.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="/questnova_coe.pdf" target="_blank"> Questnova IT Solutions Certificate of Employment</a>
+    </li>
+    <li>
+      <a href="/webninjatech_coe.pdf" target="_blank"> Web Ninja Technologies Certificate of Employment</a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+    <li>Java / J2EE</li>
+    <li>Struts Framework</li>
+    <li>Java Server Page</li>
+    <li>Spring Framework</li>
+    <li>XML</li>
+    <li>Hibernate</li>
+    <li>MaxDB</li>
+    <li>MySQL</li>
+    <li>MongoDB</li>
+    <li>Typescript</li>
+    <li>Node JS</li>
+    <li>Express JS</li>
+    <li>Angular</li>
+    <li>NestJS</li>
+  </ul>
+</BaseLayout>
