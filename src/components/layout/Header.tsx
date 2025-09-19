@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X, Home, User, Folder, Code, Mail, Briefcase } from 'lucide-react';
+import { Menu, X, Home, User, Folder, Code, Mail, Briefcase, GraduationCap } from 'lucide-react';
 import { navigationItems } from '../../data/navigation';
 
 /**
@@ -14,6 +14,7 @@ const iconMap = {
   briefcase: Briefcase,
   code: Code,
   mail: Mail,
+  'academic-cap': GraduationCap,
 };
 
 /**

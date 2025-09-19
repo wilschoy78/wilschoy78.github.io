@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Github, Linkedin, Mail, Code, Database, Globe } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, Mail, Code, Database, Server, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 /**
@@ -9,6 +9,15 @@ import { Link } from 'react-router-dom';
 export const Home: React.FC = () => {
   // Inline data for featured projects
   const featuredProjects = [
+    {
+      id: 'arrays-presentation',
+      title: 'Interactive Arrays Presentation',
+      description: 'Educational 3D visualization of array data structures with interactive examples and animations',
+      technologies: ['JavaScript', 'Three.js', 'WebGL', 'CSS3'],
+      imageUrl: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=3D%20array%20data%20structure%20visualization%20educational%20interactive%20programming%20concept&image_size=landscape_4_3',
+      presentationUrl: '/arrays.html',
+      isPresentation: true
+    },
     {
       id: '1',
       title: 'E-Commerce Platform',
@@ -42,7 +51,7 @@ export const Home: React.FC = () => {
     { name: 'TypeScript', icon: Code, proficiency: 4 },
     { name: 'MongoDB', icon: Database, proficiency: 4 },
     { name: 'PostgreSQL', icon: Database, proficiency: 4 },
-    { name: 'NestJS', icon: Globe, proficiency: 5 }
+    { name: 'NestJS', icon: Server, proficiency: 5 }
   ];
 
   return (
@@ -271,15 +280,27 @@ export const Home: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium"
-                  >
-                    <Github size={16} />
-                    <span>View Code</span>
-                  </a>
+                  {project.isPresentation ? (
+                    <a
+                      href={project.presentationUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+                    >
+                      <Play size={16} />
+                      <span>Launch Presentation</span>
+                    </a>
+                  ) : (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      <Github size={16} />
+                      <span>View Code</span>
+                    </a>
+                  )}
                 </div>
               </motion.div>
             ))}

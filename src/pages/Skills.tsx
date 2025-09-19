@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Code, Database, Globe, Smartphone, Server, Wrench, Award, TrendingUp } from 'lucide-react';
+import { Code, Database, Monitor, Smartphone, Server, Settings, Award, Activity } from 'lucide-react';
 
 interface Skill {
   id: string;
@@ -28,7 +28,7 @@ export const Skills: React.FC = () => {
     {
       id: 'frontend',
       name: 'Frontend Development',
-      icon: <Globe className="h-6 w-6" />,
+      icon: <Monitor className="h-6 w-6" />,
       description: 'Creating responsive and interactive user interfaces',
       skills: [
         { id: '1', name: 'React', level: 95, category: 'frontend', yearsOfExperience: 4, description: 'Advanced component architecture and state management' },
@@ -82,7 +82,7 @@ export const Skills: React.FC = () => {
     {
       id: 'tools',
       name: 'Tools & DevOps',
-      icon: <Wrench className="h-6 w-6" />,
+      icon: <Settings className="h-6 w-6" />,
       description: 'Development tools, deployment, and infrastructure',
       skills: [
         { id: '23', name: 'Git', level: 90, category: 'tools', yearsOfExperience: 5, description: 'Version control and collaboration workflows' },
@@ -183,7 +183,7 @@ export const Skills: React.FC = () => {
               </div>
               <div className="flex flex-col items-center">
                 <div className="bg-purple-100 p-4 rounded-full mb-4">
-                  <TrendingUp className="h-8 w-8 text-purple-600" />
+                  <Activity className="h-8 w-8 text-purple-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">50+</h3>
                 <p className="text-gray-600">Projects Completed</p>

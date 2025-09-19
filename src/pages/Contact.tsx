@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Github, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Github, Linkedin, Twitter, Link } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { emailjsConfig } from '../config/emailjs';
 import type { EmailTemplateParams } from '../config/emailjs';
@@ -48,7 +48,7 @@ export const Contact: React.FC = () => {
     {
       name: 'Facebook',
       url: 'https://www.facebook.com/wilsongayo',
-      icon: <Facebook className="h-5 w-5" />
+      icon: <Link className="h-5 w-5" />
     },
     {
       name: 'LinkedIn',

@@ -20,6 +20,11 @@ export const navigationItems: NavItem[] = [
     icon: 'folder'
   },
   {
+    name: 'Education',
+    href: '/education',
+    icon: 'academic-cap'
+  },
+  {
     name: 'Services',
     href: '/services',
     icon: 'briefcase'

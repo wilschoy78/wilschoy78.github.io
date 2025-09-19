@@ -6,6 +6,21 @@ import type { Project } from '../types';
  */
 export const projects: Project[] = [
   {
+    id: 'array-data-structures-3d',
+    title: 'Interactive 3D Array Data Structures Presentation',
+    description: 'Educational 3D visualization demonstrating fundamental array concepts and operations',
+    longDescription: 'An immersive educational presentation that teaches array data structures through interactive 3D visualizations. Features animated demonstrations of array operations including insertion, deletion, searching, and sorting. Built with Three.js for 3D graphics, GSAP for smooth animations, and includes comprehensive code examples with syntax highlighting. Perfect for computer science education and demonstrating complex programming concepts in an engaging visual format.',
+    technologies: ['Three.js', 'JavaScript', 'GSAP', 'HTML5', 'CSS3', 'Highlight.js', 'Tailwind CSS'],
+    imageUrl: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=3d%20interactive%20array%20data%20structure%20visualization%20educational%20presentation%20programming%20concepts%20modern%20interface&image_size=landscape_4_3',
+    demoUrl: './arrays.html',
+    githubUrl: 'https://github.com/wilschoy78/array-visualization',
+    featured: true,
+    category: 'tool',
+    status: 'completed',
+    startDate: '2024-12-01',
+    endDate: '2024-12-31'
+  },
+  {
     id: 'erpnext-retail-implementation',
     title: 'ERPNext Implementation for Retail Appliance Company',
     description: 'Comprehensive ERP system implementation for a retail appliance company using ERPNext framework',
