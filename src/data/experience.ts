@@ -144,7 +144,7 @@ export const education = [
     institution: 'Cebu Institute of Technology (CIT)',
     degree: 'Master of Science in Information Technology',
     startDate: '2008-01-01',
-    endDate: '2010-12-31',
+    endDate: '2026-03-12',
     description: 'Advanced studies in information technology, software engineering, and research methodologies'
   },
   {

@@ -6,6 +6,34 @@ import type { Project } from '../types';
  */
 export const projects: Project[] = [
   {
+    id: 'colegio-de-alicia-website',
+    title: 'Colegio De Alicia Official Website',
+    description: 'Public-facing website for Colegio De Alicia, Alicia, Bohol',
+    longDescription: 'A modern, responsive institutional website for Colegio De Alicia featuring program information, community highlights, mission and values, and future academic offerings. The site emphasizes accessibility, clear content structure, and fast performance for a broad audience.',
+    technologies: ['HTML5', 'CSS3', 'JavaScript'],
+    imageUrl: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=college%20website%20homepage%20modern%20responsive%20institutional%20site%20clean%20design%20blue%20theme&image_size=landscape_4_3',
+    demoUrl: 'https://www.colegiodealicia.com/',
+    githubUrl: '',
+    featured: true,
+    category: 'web',
+    status: 'in-progress',
+    startDate: '2025-09-01'
+  },
+  {
+    id: 'colegio-de-alicia-mis-login',
+    title: 'Colegio De Alicia School Management System (Login)',
+    description: 'Login portal for Colegio De Alicia School Management System',
+    longDescription: 'Secure login interface for the Colegio De Alicia MIS, providing authenticated access for faculty and staff. Focused on security, usability, and clear user flows.',
+    technologies: ['HTML5', 'CSS3', 'JavaScript'],
+    imageUrl: 'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=school%20management%20system%20login%20page%20secure%20form%20clean%20ui%20blue%20theme&image_size=landscape_4_3',
+    demoUrl: 'https://mis.colegiodealicia.com/login',
+    githubUrl: '',
+    featured: true,
+    category: 'web',
+    status: 'in-progress',
+    startDate: '2025-09-01'
+  },
+  {
     id: 'array-data-structures-3d',
     title: 'Interactive 3D Array Data Structures Presentation',
     description: 'Educational 3D visualization demonstrating fundamental array concepts and operations',
