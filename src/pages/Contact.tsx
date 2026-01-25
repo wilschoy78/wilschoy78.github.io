@@ -183,7 +183,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -193,10 +193,10 @@ export const Contact: React.FC = () => {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Get In Touch
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               I'd love to hear from you! Whether you have a project in mind, 
               want to collaborate, or just want to say hello, feel free to reach out.
             </p>
@@ -205,19 +205,19 @@ export const Contact: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-8">
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 transition-colors duration-300">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Contact Information</h2>
                 
                 <div className="space-y-6">
                   <div className="flex items-center">
-                    <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                      <Mail className="h-6 w-6 text-blue-600" />
+                    <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg mr-4">
+                      <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">Email</h3>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">Email</h3>
                       <a 
                         href={`mailto:${contactInfo.email}`}
-                        className="text-blue-600 hover:text-blue-700 transition-colors"
+                        className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                       >
                         {contactInfo.email}
                       </a>
@@ -225,14 +225,14 @@ export const Contact: React.FC = () => {
                   </div>
                   
                   <div className="flex items-center">
-                    <div className="bg-green-100 p-3 rounded-lg mr-4">
-                      <Phone className="h-6 w-6 text-green-600" />
+                    <div className="bg-green-100 dark:bg-green-900 p-3 rounded-lg mr-4">
+                      <Phone className="h-6 w-6 text-green-600 dark:text-green-400" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">Phone</h3>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">Phone</h3>
                       <a 
                         href={`tel:${contactInfo.phone}`}
-                        className="text-green-600 hover:text-green-700 transition-colors"
+                        className="text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 transition-colors"
                       >
                         {contactInfo.phone}
                       </a>
@@ -240,20 +240,20 @@ export const Contact: React.FC = () => {
                   </div>
                   
                   <div className="flex items-center">
-                    <div className="bg-purple-100 p-3 rounded-lg mr-4">
-                      <MapPin className="h-6 w-6 text-purple-600" />
+                    <div className="bg-purple-100 dark:bg-purple-900 p-3 rounded-lg mr-4">
+                      <MapPin className="h-6 w-6 text-purple-600 dark:text-purple-400" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">Location</h3>
-                      <p className="text-gray-600">{contactInfo.location}</p>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">Location</h3>
+                      <p className="text-gray-600 dark:text-gray-300">{contactInfo.location}</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Connect With Me</h2>
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 transition-colors duration-300">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Connect With Me</h2>
                 <div className="flex space-x-4">
                   {socialLinks.map((social) => (
                     <motion.a
@@ -261,7 +261,7 @@ export const Contact: React.FC = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
+                      className="flex items-center justify-center w-12 h-12 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-600 hover:text-white dark:hover:text-white transition-colors"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -269,13 +269,13 @@ export const Contact: React.FC = () => {
                     </motion.a>
                   ))}
                 </div>
-                <p className="text-gray-600 mt-4">
+                <p className="text-gray-600 dark:text-gray-300 mt-4">
                   Follow me on social media for updates on my latest projects and tech insights.
                 </p>
               </div>
 
               {/* Availability */}
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-700 dark:to-purple-700 rounded-lg p-8 text-white">
                 <h2 className="text-2xl font-bold mb-4">Availability</h2>
                 <p className="text-lg opacity-90 mb-4">
                   I'm currently available for new projects and collaborations.
@@ -289,8 +289,8 @@ export const Contact: React.FC = () => {
 
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Me a Message</h2>
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 transition-colors duration-300">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send Me a Message</h2>
                 
                 {submitStatus === 'success' && (
                   <motion.div
@@ -317,7 +317,7 @@ export const Contact: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Name *
                       </label>
                       <input
@@ -326,18 +326,18 @@ export const Contact: React.FC = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors dark:bg-gray-700 dark:text-white dark:border-gray-600 ${
                           errors.name ? 'border-red-300' : 'border-gray-300'
                         }`}
                         placeholder="Your full name"
                       />
                       {errors.name && (
-                        <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                        <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.name}</p>
                       )}
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Email *
                       </label>
                       <input
@@ -346,19 +346,19 @@ export const Contact: React.FC = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors dark:bg-gray-700 dark:text-white dark:border-gray-600 ${
                           errors.email ? 'border-red-300' : 'border-gray-300'
                         }`}
                         placeholder="your.email@example.com"
                       />
                       {errors.email && (
-                        <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                        <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.email}</p>
                       )}
                     </div>
                   </div>
                   
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Subject *
                     </label>
                     <input
@@ -367,18 +367,18 @@ export const Contact: React.FC = () => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors dark:bg-gray-700 dark:text-white dark:border-gray-600 ${
                         errors.subject ? 'border-red-300' : 'border-gray-300'
                       }`}
                       placeholder="What's this about?"
                     />
                     {errors.subject && (
-                      <p className="mt-1 text-sm text-red-600">{errors.subject}</p>
+                      <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.subject}</p>
                     )}
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Message *
                     </label>
                     <textarea
@@ -387,13 +387,13 @@ export const Contact: React.FC = () => {
                       rows={6}
                       value={formData.message}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none dark:bg-gray-700 dark:text-white dark:border-gray-600 ${
                         errors.message ? 'border-red-300' : 'border-gray-300'
                       }`}
                       placeholder="Tell me about your project or just say hello!"
                     />
                     {errors.message && (
-                      <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+                      <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.message}</p>
                     )}
                   </div>
                   
@@ -426,24 +426,24 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* FAQ Section */}
-          <motion.div variants={itemVariants} className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <motion.div variants={itemVariants} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 transition-colors duration-300">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Frequently Asked Questions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">What's your typical response time?</h3>
-                <p className="text-gray-600">I usually respond to emails within 24 hours during business days.</p>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">What's your typical response time?</h3>
+                <p className="text-gray-600 dark:text-gray-300">I usually respond to emails within 24 hours during business days.</p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you work on weekends?</h3>
-                <p className="text-gray-600">I'm available for urgent matters, but prefer to discuss project details during weekdays.</p>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Do you work on weekends?</h3>
+                <p className="text-gray-600 dark:text-gray-300">I'm available for urgent matters, but prefer to discuss project details during weekdays.</p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">What types of projects do you take on?</h3>
-                <p className="text-gray-600">I work on web applications, mobile apps, and full-stack development projects of various sizes.</p>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">What types of projects do you take on?</h3>
+                <p className="text-gray-600 dark:text-gray-300">I work on web applications, mobile apps, and full-stack development projects of various sizes.</p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you offer consulting services?</h3>
-                <p className="text-gray-600">Yes, I provide technical consulting and code reviews for existing projects.</p>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Do you offer consulting services?</h3>
+                <p className="text-gray-600 dark:text-gray-300">Yes, I provide technical consulting and code reviews for existing projects.</p>
               </div>
             </div>
           </motion.div>

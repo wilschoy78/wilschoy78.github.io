@@ -9,8 +9,10 @@ export const experience: Experience[] = [
     title: 'Senior Software Developer',
     company: 'Questnova Systems',
     location: 'Cebu City, Philippines',
-    startDate: '2007-01-01',
+    startDate: '2005-10-31',
     current: true,
+    website: 'https://questnova.com/',
+    document: '/questnova_coe.pdf',
     description: [
       'Develop Java/J2EE web applications for enterprise clients',
       'Design and implement scalable backend systems and APIs',
@@ -29,6 +31,7 @@ export const experience: Experience[] = [
     startDate: '2019-01-01',
     endDate: '2022-12-31',
     current: false,
+    document: '/web-ninja-tech-services-coe.pdf',
     description: [
       'Developed modern web applications using Node.js and Angular',
       'Built mobile applications using Kotlin for Android and Swift for iOS',
@@ -88,6 +91,7 @@ export const teachingExperience: Experience[] = [
     startDate: '2006-01-01',
     endDate: '2016-12-31',
     current: false,
+    document: '/bscs-diploma-uv.png',
     description: [
       'Taught computer science and information technology courses',
       'Developed curriculum for programming and database courses',
@@ -106,6 +110,7 @@ export const teachingExperience: Experience[] = [
     startDate: '2011-01-01',
     endDate: '2014-12-31',
     current: false,
+    website: 'https://golden-success.com/',
     description: [
       'Led the Bachelor of Science in Information Technology program',
       'Managed IT infrastructure and systems administration',

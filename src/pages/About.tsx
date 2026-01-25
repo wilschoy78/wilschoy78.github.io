@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, GraduationCap, Briefcase, Award, Code, Phone, Mail, User, BookOpen } from 'lucide-react';
+import { Calendar, MapPin, GraduationCap, Briefcase, Award, Code, Phone, Mail, User, BookOpen, ExternalLink, FileText } from 'lucide-react';
 import { experience, teachingExperience, education } from '../data/experience';
 
 // Define interfaces for type safety
@@ -80,7 +80,7 @@ export const About: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -90,7 +90,7 @@ export const About: React.FC = () => {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               About Wilson A. Gayo
             </h1>
             
@@ -99,36 +99,36 @@ export const About: React.FC = () => {
               <img 
                 src="/profile.jpg" 
                 alt="Wilson A. Gayo" 
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover shadow-lg border-4 border-white"
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover shadow-lg border-4 border-white dark:border-gray-800 transition-colors duration-300"
               />
             </div>
             
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8 transition-colors duration-300">
               Experienced Software Developer, Educator, and Technology Leader with over 18 years 
               in the industry. Passionate about enterprise software development, teaching, and 
               mentoring the next generation of developers.
             </p>
             
             {/* Profile Information */}
-            <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 max-w-4xl mx-auto transition-colors duration-300">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex items-center space-x-3">
                   <User className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-700 font-medium">{profileInfo.name}</span>
+                  <span className="text-gray-700 dark:text-gray-300 font-medium">{profileInfo.name}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-700">{profileInfo.location}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{profileInfo.location}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-700">{profileInfo.phone}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{profileInfo.phone}</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Mail className="w-5 h-5 text-blue-600 mt-1" />
                   <div className="flex flex-col space-y-1">
                     {profileInfo.emails.map((email, index) => (
-                      <span key={index} className="text-gray-700 text-sm">{email}</span>
+                      <span key={index} className="text-gray-700 dark:text-gray-300 text-sm">{email}</span>
                     ))}
                   </div>
                 </div>
@@ -137,15 +137,15 @@ export const About: React.FC = () => {
           </motion.div>
 
           {/* Professional Summary */}
-          <motion.div variants={itemVariants} className="bg-white rounded-lg shadow-lg p-8">
+          <motion.div variants={itemVariants} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 transition-colors duration-300">
             <div className="flex items-center mb-6">
               <Code className="h-8 w-8 text-blue-600 mr-3" />
-              <h2 className="text-3xl font-bold text-gray-900">Professional Summary</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Professional Summary</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">What I Do</h3>
-                <ul className="space-y-3 text-gray-600">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">What I Do</h3>
+                <ul className="space-y-3 text-gray-600 dark:text-gray-300">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     Full-stack web application development
@@ -192,29 +192,53 @@ export const About: React.FC = () => {
           <motion.div variants={itemVariants}>
             <div className="flex items-center mb-8">
               <BookOpen className="h-8 w-8 text-blue-600 mr-3" />
-              <h2 className="text-3xl font-bold text-gray-900">Teaching Experience</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Teaching Experience</h2>
             </div>
             <div className="space-y-8">
               {teachingExperience.map((exp, index) => (
                 <motion.div
                   key={exp.id}
                   variants={itemVariants}
-                  className="bg-white rounded-lg shadow-lg p-6 relative"
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 relative transition-colors duration-300"
                 >
                   {/* Timeline connector */}
                   {index < teachingExperience.length - 1 && (
-                    <div className="absolute left-6 top-full w-0.5 h-8 bg-blue-200"></div>
+                    <div className="absolute left-6 top-full w-0.5 h-8 bg-blue-200 dark:bg-blue-900"></div>
                   )}
                   
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-1">{exp.title}</h3>
-                      <p className="text-lg text-blue-600 font-semibold mb-2">{exp.company}</p>
-                      <div className="flex flex-wrap items-center text-gray-600 text-sm mb-4">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{exp.title}</h3>
+                      <div className="flex items-center gap-3 mb-2">
+                        <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold">{exp.company}</p>
+                        {exp.website && (
+                          <a 
+                            href={exp.website} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-blue-600 dark:text-gray-500 dark:hover:text-blue-400 transition-colors"
+                            title="Visit Website"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
+                        )}
+                        {exp.document && (
+                          <a 
+                            href={exp.document} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-blue-600 dark:text-gray-500 dark:hover:text-blue-400 transition-colors"
+                            title="View Document"
+                          >
+                            <FileText className="w-4 h-4" />
+                          </a>
+                        )}
+                      </div>
+                      <div className="flex flex-wrap items-center text-gray-600 dark:text-gray-300 text-sm mb-4">
                         <div className="flex items-center mr-4 mb-1">
                           <Calendar className="h-4 w-4 mr-1" />
                           <span>{formatDate(exp.startDate)} - {exp.current ? 'Present' : formatDate(exp.endDate!)}</span>
-                          <span className="ml-2 text-gray-500">({calculateYears(exp.startDate, exp.endDate)})</span>
+                          <span className="ml-2 text-gray-500 dark:text-gray-400">({calculateYears(exp.startDate, exp.endDate)})</span>
                         </div>
                         <div className="flex items-center mb-1">
                           <MapPin className="h-4 w-4 mr-1" />
@@ -226,7 +250,7 @@ export const About: React.FC = () => {
                   
                   <ul className="space-y-2 mb-4">
                     {exp.description.map((desc, i) => (
-                      <li key={i} className="flex items-start text-gray-600">
+                      <li key={i} className="flex items-start text-gray-600 dark:text-gray-300">
                         <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                         {desc}
                       </li>
@@ -237,7 +261,7 @@ export const About: React.FC = () => {
                     {exp.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full transition-colors duration-300"
                       >
                         {tech}
                       </span>
@@ -252,29 +276,53 @@ export const About: React.FC = () => {
           <motion.div variants={itemVariants}>
             <div className="flex items-center mb-8">
               <Briefcase className="h-8 w-8 text-blue-600 mr-3" />
-              <h2 className="text-3xl font-bold text-gray-900">Industry Experience</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Industry Experience</h2>
             </div>
             <div className="space-y-8">
               {experience.map((exp, index) => (
                 <motion.div
                   key={exp.id}
                   variants={itemVariants}
-                  className="bg-white rounded-lg shadow-lg p-6 relative"
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 relative transition-colors duration-300"
                 >
                   {/* Timeline connector */}
                   {index < experience.length - 1 && (
-                    <div className="absolute left-6 top-full w-0.5 h-8 bg-blue-200"></div>
+                    <div className="absolute left-6 top-full w-0.5 h-8 bg-blue-200 dark:bg-blue-900"></div>
                   )}
                   
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-1">{exp.title}</h3>
-                      <p className="text-lg text-blue-600 font-semibold mb-2">{exp.company}</p>
-                      <div className="flex flex-wrap items-center text-gray-600 text-sm mb-4">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{exp.title}</h3>
+                      <div className="flex items-center gap-3 mb-2">
+                        <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold">{exp.company}</p>
+                        {exp.website && (
+                          <a 
+                            href={exp.website} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-blue-600 dark:text-gray-500 dark:hover:text-blue-400 transition-colors"
+                            title="Visit Website"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
+                        )}
+                        {exp.document && (
+                          <a 
+                            href={exp.document} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-blue-600 dark:text-gray-500 dark:hover:text-blue-400 transition-colors"
+                            title="View Document"
+                          >
+                            <FileText className="w-4 h-4" />
+                          </a>
+                        )}
+                      </div>
+                      <div className="flex flex-wrap items-center text-gray-600 dark:text-gray-300 text-sm mb-4">
                         <div className="flex items-center mr-4 mb-1">
                           <Calendar className="h-4 w-4 mr-1" />
                           <span>{formatDate(exp.startDate)} - {exp.current ? 'Present' : formatDate(exp.endDate!)}</span>
-                          <span className="ml-2 text-gray-500">({calculateYears(exp.startDate, exp.endDate)})</span>
+                          <span className="ml-2 text-gray-500 dark:text-gray-400">({calculateYears(exp.startDate, exp.endDate)})</span>
                         </div>
                         <div className="flex items-center mb-1">
                           <MapPin className="h-4 w-4 mr-1" />
@@ -286,7 +334,7 @@ export const About: React.FC = () => {
                   
                   <ul className="space-y-2 mb-4">
                     {exp.description.map((desc, i) => (
-                      <li key={i} className="flex items-start text-gray-600">
+                      <li key={i} className="flex items-start text-gray-600 dark:text-gray-300">
                         <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                         {desc}
                       </li>
@@ -297,7 +345,7 @@ export const About: React.FC = () => {
                     {exp.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full transition-colors duration-300"
                       >
                         {tech}
                       </span>
@@ -312,29 +360,29 @@ export const About: React.FC = () => {
           <motion.div variants={itemVariants}>
             <div className="flex items-center mb-8">
               <GraduationCap className="h-8 w-8 text-blue-600 mr-3" />
-              <h2 className="text-3xl font-bold text-gray-900">Education</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Education</h2>
             </div>
             <div className="space-y-6">
               {education.map((edu) => (
                 <motion.div
                   key={edu.id}
                   variants={itemVariants}
-                  className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="flex items-start">
-                    <GraduationCap className="w-6 h-6 text-blue-600 mr-3 mt-1" />
+                    <GraduationCap className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-3 mt-1" />
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                         {edu.degree}
                       </h3>
-                      <p className="text-lg text-blue-600 font-medium mb-2">
+                      <p className="text-lg text-blue-600 dark:text-blue-400 font-medium mb-2">
                         {edu.institution}
                       </p>
-                      <div className="flex items-center text-gray-600 mb-3">
+                      <div className="flex items-center text-gray-600 dark:text-gray-400 mb-3">
                         <Calendar className="w-4 h-4 mr-2" />
                         <span>{formatDate(edu.startDate)} - {formatDate(edu.endDate)}</span>
                       </div>
-                      <p className="text-gray-700">{edu.description}</p>
+                      <p className="text-gray-700 dark:text-gray-300">{edu.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -346,9 +394,9 @@ export const About: React.FC = () => {
           <motion.div variants={itemVariants}>
             <div className="flex items-center mb-8">
               <Code className="h-8 w-8 text-blue-600 mr-3" />
-              <h2 className="text-3xl font-bold text-gray-900">Skills & Technologies</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Skills & Technologies</h2>
             </div>
-            <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 transition-colors duration-300">
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <motion.span
@@ -367,18 +415,18 @@ export const About: React.FC = () => {
           <motion.div variants={itemVariants}>
             <div className="flex items-center mb-8">
               <Award className="h-8 w-8 text-blue-600 mr-3" />
-              <h2 className="text-3xl font-bold text-gray-900">Certifications & Expertise</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Certifications & Expertise</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               {certifications.map((cert, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="flex items-start">
-                    <Award className="w-5 h-5 text-blue-600 mr-3 mt-1" />
-                    <span className="text-gray-700 font-medium">{cert}</span>
+                    <Award className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-3 mt-1" />
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">{cert}</span>
                   </div>
                 </motion.div>
               ))}

@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
       <div className="container-max">
         <div className="py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
                 </div>
                 <span className="text-xl font-bold">Wilson Gayo</span>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                 Freelance Software Developer specializing in full-stack web applications and APIs. 
                 Passionate about creating efficient, scalable solutions.
               </p>
@@ -59,15 +59,15 @@ export const Footer: React.FC = () => {
             {/* Contact Information */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold">Contact Info</h3>
-              <div className="space-y-2 text-sm text-gray-400">
+              <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <p>
-                  <span className="font-medium text-white">Email:</span> {contactInfo.email}
+                  <span className="font-medium text-gray-900 dark:text-white">Email:</span> {contactInfo.email}
                 </p>
                 <p>
-                  <span className="font-medium text-white">Location:</span> {contactInfo.location}
+                  <span className="font-medium text-gray-900 dark:text-white">Location:</span> {contactInfo.location}
                 </p>
                 <p>
-                  <span className="font-medium text-white">Status:</span> {contactInfo.availability}
+                  <span className="font-medium text-gray-900 dark:text-white">Status:</span> {contactInfo.availability}
                 </p>
               </div>
             </div>
@@ -85,7 +85,7 @@ export const Footer: React.FC = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-200"
+                      className="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-200"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                       aria-label={`Visit ${link.name}`}

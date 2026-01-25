@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Settings, CheckCircle, ArrowRight } from 'lucide-react';
+import { Users, Settings, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
 import { getAllServices } from '../data/services';
 import type { Service } from '../types/index';
 
@@ -86,6 +86,41 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
         </div>
       )}
 
+      {/* Live Links / Examples */}
+      {service.links && service.links.length > 0 && (
+        <div className="mb-6">
+          <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+            Live Examples
+          </h4>
+          <div className="flex flex-col gap-3">
+            {service.links.map((link, linkIndex) => (
+              <div 
+                key={linkIndex}
+                className={`flex flex-col ${link.highlight ? 'bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg border border-blue-100 dark:border-blue-800' : ''}`}
+              >
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center ${link.highlight ? 'text-blue-700 dark:text-blue-300 font-medium' : 'text-blue-600 dark:text-blue-400'} hover:underline transition-colors duration-200`}
+                >
+                  <ExternalLink className="w-4 h-4 mr-2 flex-shrink-0" />
+                  <span className="text-sm">{link.label}</span>
+                  {link.highlight && (
+                    <span className="ml-2 px-2 py-0.5 text-xs bg-blue-100 text-blue-800 rounded-full font-semibold">Featured</span>
+                  )}
+                </a>
+                {link.description && (
+                  <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 ml-6">
+                    {link.description}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* CTA Button */}
       <motion.button
         whileHover={{ scale: 1.02 }}
@@ -106,7 +141,7 @@ const Services: React.FC = () => {
   const services = getAllServices();
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <motion.div

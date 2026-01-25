@@ -78,6 +78,22 @@ export const services: Service[] = [
       'Ongoing Maintenance & Updates'
     ],
     technologies: ['WordPress', 'PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript', 'jQuery'],
+    links: [
+      {
+        label: 'Family Appliance',
+        url: 'https://familyapplianceph.com/'
+      },
+      {
+        label: 'AABBQ',
+        url: 'https://aabbq.org/'
+      },
+      {
+        label: 'Octanity',
+        url: 'https://octanity.net/',
+        description: 'A standout project founded by former students - A student-led startup initiative that I am proud to be part of.',
+        highlight: true
+      }
+    ],
     icon: 'Settings',
     category: 'development',
     featured: true
@@ -97,6 +113,16 @@ export const services: Service[] = [
       'Training & Ongoing Support'
     ],
     technologies: ['Moodle', 'PHP', 'MySQL', 'Apache', 'HTML5', 'CSS3', 'JavaScript'],
+    links: [
+      {
+        label: 'Golden Success College LMS',
+        url: 'https://olms.golden-success.com/login/index.php'
+      },
+      {
+        label: 'Benedicto College Computer Studies LMS',
+        url: 'https://bcccs.octanity.net/lms/login/index.php'
+      }
+    ],
     icon: 'Settings',
     category: 'implementation',
     featured: true

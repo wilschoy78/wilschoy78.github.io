@@ -57,7 +57,7 @@ export const Projects: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -67,21 +67,21 @@ export const Projects: React.FC = () => {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               My Projects
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               A collection of projects I've worked on, showcasing different technologies 
               and approaches to solving real-world problems.
             </p>
           </motion.div>
 
           {/* Filters */}
-          <motion.div variants={itemVariants} className="bg-white rounded-lg shadow-lg p-6">
+          <motion.div variants={itemVariants} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
               {/* Category Filter */}
               <div className="flex items-center space-x-4">
-                <Filter className="h-5 w-5 text-gray-600" />
+                <Filter className="h-5 w-5 text-gray-600 dark:text-gray-400" />
                 <div className="flex flex-wrap gap-2">
                   {categories.map((category) => (
                     <button
@@ -90,7 +90,7 @@ export const Projects: React.FC = () => {
                       className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                         selectedCategory === category
                           ? 'bg-blue-600 text-white'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
                       }`}
                     >
                       {category === 'all' ? 'All Projects' : category}

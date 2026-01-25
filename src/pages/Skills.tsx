@@ -145,7 +145,7 @@ export const Skills: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -155,44 +155,44 @@ export const Skills: React.FC = () => {
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Skills & Expertise
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               A comprehensive overview of my technical skills and proficiency levels 
               across different areas of software development.
             </p>
           </motion.div>
 
           {/* Skills Overview */}
-          <motion.div variants={itemVariants} className="bg-white rounded-lg shadow-lg p-8">
+          <motion.div variants={itemVariants} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 transition-colors duration-300">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div className="flex flex-col items-center">
-                <div className="bg-blue-100 p-4 rounded-full mb-4">
-                  <Code className="h-8 w-8 text-blue-600" />
+                <div className="bg-blue-100 dark:bg-blue-900 p-4 rounded-full mb-4">
+                  <Code className="h-8 w-8 text-blue-600 dark:text-blue-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">20+</h3>
-                <p className="text-gray-600">Years of Experience</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">20+</h3>
+                <p className="text-gray-600 dark:text-gray-300">Years of Experience</p>
               </div>
               <div className="flex flex-col items-center">
-                <div className="bg-green-100 p-4 rounded-full mb-4">
-                  <Award className="h-8 w-8 text-green-600" />
+                <div className="bg-green-100 dark:bg-green-900 p-4 rounded-full mb-4">
+                  <Award className="h-8 w-8 text-green-600 dark:text-green-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{skillCategories.reduce((acc, cat) => acc + cat.skills.length, 0)}</h3>
-                <p className="text-gray-600">Technical Skills</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{skillCategories.reduce((acc, cat) => acc + cat.skills.length, 0)}</h3>
+                <p className="text-gray-600 dark:text-gray-300">Technical Skills</p>
               </div>
               <div className="flex flex-col items-center">
-                <div className="bg-purple-100 p-4 rounded-full mb-4">
-                  <Activity className="h-8 w-8 text-purple-600" />
+                <div className="bg-purple-100 dark:bg-purple-900 p-4 rounded-full mb-4">
+                  <Activity className="h-8 w-8 text-purple-600 dark:text-purple-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">50+</h3>
-                <p className="text-gray-600">Projects Completed</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">50+</h3>
+                <p className="text-gray-600 dark:text-gray-300">Projects Completed</p>
               </div>
             </div>
           </motion.div>
 
           {/* Category Navigation */}
-          <motion.div variants={itemVariants} className="bg-white rounded-lg shadow-lg p-6">
+          <motion.div variants={itemVariants} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-colors duration-300">
             <div className="flex flex-wrap gap-4 justify-center">
               {skillCategories.map((category) => (
                 <button
@@ -201,7 +201,7 @@ export const Skills: React.FC = () => {
                   className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                     selectedCategory === category.id
                       ? 'bg-blue-600 text-white shadow-lg transform scale-105'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
                   }`}
                 >
                   {category.icon}
@@ -218,15 +218,15 @@ export const Skills: React.FC = () => {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="bg-white rounded-lg shadow-lg p-8"
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 transition-colors duration-300"
             >
               <div className="flex items-center mb-6">
-                <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg mr-4">
                   {selectedCategoryData.icon}
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900">{selectedCategoryData.name}</h2>
-                  <p className="text-gray-600">{selectedCategoryData.description}</p>
+                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{selectedCategoryData.name}</h2>
+                  <p className="text-gray-600 dark:text-gray-300">{selectedCategoryData.description}</p>
                 </div>
               </div>
 
@@ -235,10 +235,10 @@ export const Skills: React.FC = () => {
                   <motion.div
                     key={skill.id}
                     variants={skillVariants}
-                    className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
+                    className="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-md transition-shadow"
                   >
                     <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-xl font-semibold text-gray-900">{skill.name}</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{skill.name}</h3>
                       <div className="flex items-center space-x-2">
                         <span className={`px-2 py-1 rounded-full text-xs font-medium text-white ${
                           getSkillLevelColor(skill.level)
@@ -246,7 +246,7 @@ export const Skills: React.FC = () => {
                           {getSkillLevelText(skill.level)}
                         </span>
                         {skill.yearsOfExperience && (
-                          <span className="text-sm text-gray-500">
+                          <span className="text-sm text-gray-500 dark:text-gray-400">
                             {skill.yearsOfExperience}y
                           </span>
                         )}
@@ -256,10 +256,10 @@ export const Skills: React.FC = () => {
                     {/* Progress Bar */}
                     <div className="mb-3">
                       <div className="flex items-center justify-between mb-1">
-                        <span className="text-sm text-gray-600">Proficiency</span>
-                        <span className="text-sm font-medium text-gray-900">{skill.level}%</span>
+                        <span className="text-sm text-gray-600 dark:text-gray-300">Proficiency</span>
+                        <span className="text-sm font-medium text-gray-900 dark:text-white">{skill.level}%</span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                         <motion.div
                           className={`h-2 rounded-full ${getSkillLevelColor(skill.level)}`}
                           initial={{ width: 0 }}
@@ -270,7 +270,7 @@ export const Skills: React.FC = () => {
                     </div>
                     
                     {skill.description && (
-                      <p className="text-gray-600 text-sm">{skill.description}</p>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">{skill.description}</p>
                     )}
                   </motion.div>
                 ))}
@@ -301,9 +301,9 @@ export const Skills: React.FC = () => {
           </motion.div>
 
           {/* Call to Action */}
-          <motion.div variants={itemVariants} className="text-center bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Let's Build Something Amazing</h2>
-            <p className="text-xl text-gray-600 mb-6">
+          <motion.div variants={itemVariants} className="text-center bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 transition-colors duration-300">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Let's Build Something Amazing</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
               Ready to bring your ideas to life with these skills and technologies.
             </p>
             <motion.a

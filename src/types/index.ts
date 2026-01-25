@@ -44,6 +44,8 @@ export interface Experience {
   current: boolean;
   description: string[];
   technologies: string[];
+  website?: string;
+  document?: string;
 }
 
 // Navigation item interface
@@ -70,6 +72,12 @@ export interface Service {
   icon: string;
   category: 'consultation' | 'implementation' | 'development';
   featured: boolean;
+  links?: {
+    label: string;
+    url: string;
+    description?: string;
+    highlight?: boolean;
+  }[];
 }
 
 // Certification interface
