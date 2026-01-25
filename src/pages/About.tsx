@@ -369,7 +369,7 @@ export const About: React.FC = () => {
               <Award className="h-8 w-8 text-blue-600 mr-3" />
               <h2 className="text-3xl font-bold text-gray-900">Certifications & Expertise</h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
               {certifications.map((cert, index) => (
                 <motion.div
                   key={index}
@@ -382,6 +382,18 @@ export const About: React.FC = () => {
                   </div>
                 </motion.div>
               ))}
+            </div>
+            
+            <div className="text-center">
+              <a
+                href="https://www.credly.com/users/wilson-gayo/badges#credly"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors hover:underline"
+              >
+                <Award className="w-5 h-5" />
+                <span>View Verified Badges on Credly</span>
+              </a>
             </div>
           </motion.div>
 

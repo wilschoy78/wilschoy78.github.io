@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Code, Users, ArrowRight, Play, ExternalLink } from 'lucide-react';
+import { BookOpen, Code, Users, ArrowRight, Play, ExternalLink, Award } from 'lucide-react';
+import { certifications } from '../data/certifications';
 
 /**
  * Education page component showcasing educational content and teaching philosophy
@@ -158,6 +159,73 @@ export function Education() {
                 </div>
               </div>
             </div>
+          </div>
+        </motion.section>
+
+        {/* Certifications Section */}
+        <motion.section
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+          className="mb-20"
+        >
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            Certifications & Training
+          </h2>
+          <p className="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+            Continuous learning through industry-recognized certifications and specialized training programs, particularly in AI and emerging technologies.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {certifications.map((cert, index) => (
+              <motion.div
+                key={cert.id}
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.2 + index * 0.05, duration: 0.5 }}
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-700">
+                  <img 
+                    src={cert.imageUrl} 
+                    alt={cert.title}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                  <div className="absolute top-0 right-0 m-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">
+                    {cert.date}
+                  </div>
+                </div>
+                
+                <div className="p-6 flex-grow flex flex-col">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Award className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                    <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
+                      {cert.issuer}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2">
+                    {cert.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+                    {cert.description}
+                  </p>
+                  
+                  {cert.credentialUrl && (
+                    <a
+                      href={cert.credentialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mt-auto"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      View Certificate
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.section>
 

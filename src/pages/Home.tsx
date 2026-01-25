@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Github, Linkedin, Mail, Code, Database, Server, Play } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, Mail, Code, Database, Server, Play, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 /**
@@ -141,6 +141,15 @@ export const Home: React.FC = () => {
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={24} />
+                </a>
+                <a
+                  href="https://www.credly.com/users/wilson-gayo/badges#credly"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center text-white hover:bg-orange-700 transition-colors duration-200"
+                  aria-label="Credly"
+                >
+                  <Award size={24} />
                 </a>
                 <Link
                   to="/contact"

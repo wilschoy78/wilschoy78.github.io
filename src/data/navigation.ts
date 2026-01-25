@@ -61,6 +61,11 @@ export const socialLinks: SocialLink[] = [
     icon: 'twitter'
   },
   {
+    name: 'Credly',
+    url: 'https://www.credly.com/users/wilson-gayo/badges#credly',
+    icon: 'award'
+  },
+  {
     name: 'Email',
     url: 'mailto:wilson.gayo@example.com',
     icon: 'mail'

@@ -71,3 +71,14 @@ export interface Service {
   category: 'consultation' | 'implementation' | 'development';
   featured: boolean;
 }
+
+// Certification interface
+export interface Certification {
+  id: string;
+  title: string;
+  issuer: string;
+  date: string;
+  imageUrl: string;
+  credentialUrl?: string;
+  description?: string;
+}
