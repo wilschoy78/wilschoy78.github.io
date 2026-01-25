@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Mail, Phone, MapPin, Github, Linkedin, ExternalLink, 
-  Printer, Download, Link as LinkIcon, Calendar, Award 
+  Mail, Phone, MapPin, 
+  Printer, Download, Link as LinkIcon, Calendar 
 } from 'lucide-react';
 import { experience, teachingExperience, education } from '../data/experience';
 
