@@ -107,15 +107,13 @@ export const Home: React.FC = () => {
                   <span>View My Work</span>
                   <ArrowRight size={20} />
                 </Link>
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/resume"
                   className="btn-secondary inline-flex items-center justify-center space-x-2"
                 >
                   <Download size={20} />
-                  <span>Download Resume</span>
-                </a>
+                  <span>View Resume</span>
+                </Link>
               </motion.div>
 
               <motion.div

@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+    <footer className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white border-t border-gray-200 dark:border-gray-800 transition-colors duration-300 print:hidden">
       <div className="container-max">
         <div className="py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

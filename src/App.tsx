@@ -7,6 +7,7 @@ import { Education } from './pages/Education';
 import Services from './pages/Services';
 import { Skills } from './pages/Skills';
 import { Contact } from './pages/Contact';
+import { Resume } from './pages/Resume';
 
 /**
  * Main App component with routing configuration
@@ -24,6 +25,7 @@ function App() {
             <Route path="/education" element={<Education />} />
             <Route path="/services" element={<Services />} />
             <Route path="/skills" element={<Skills />} />
+            <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </Layout>

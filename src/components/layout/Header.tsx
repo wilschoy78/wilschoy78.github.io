@@ -35,7 +35,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50 transition-colors duration-300">
+    <header className="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50 transition-colors duration-300 print:hidden">
       <div className="container-max">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
