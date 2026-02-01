@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Mail, Heart, Award } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, Heart, Award, Smartphone } from 'lucide-react';
 // import { socialLinks, contactInfo } from '../../data/navigation';
 
 // Temporary inline data for testing
@@ -8,6 +8,7 @@ const socialLinks = [
   { name: 'GitHub', url: 'https://github.com/wilschoy78', icon: 'github' },
   { name: 'LinkedIn', url: 'https://linkedin.com/in/wilson-gayo', icon: 'linkedin' },
   { name: 'Credly', url: 'https://www.credly.com/users/wilson-gayo/badges#credly', icon: 'award' },
+  { name: 'Google Developers', url: 'https://developers.google.com/profile/u/111695751234782502699?utm_source=developer.android.com', icon: 'google' },
   { name: 'Twitter', url: 'https://x.com/wilsongayo', icon: 'twitter' },
   { name: 'Email', url: 'mailto:wilson@questnova.com', icon: 'mail' }
 ];
@@ -28,6 +29,7 @@ const iconMap = {
   twitter: Twitter,
   mail: Mail,
   award: Award,
+  google: Smartphone,
 };
 
 /**

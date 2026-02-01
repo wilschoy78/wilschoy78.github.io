@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Github, Linkedin, Mail, Code, Database, Server, Play, Award } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, Mail, Code, Database, Server, Play, Award, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 /**
@@ -148,6 +148,15 @@ export const Home: React.FC = () => {
                   aria-label="Credly"
                 >
                   <Award size={24} />
+                </a>
+                <a
+                  href="https://developers.google.com/profile/u/111695751234782502699?utm_source=developer.android.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white hover:bg-blue-600 transition-colors duration-200"
+                  aria-label="Google Developers"
+                >
+                  <Smartphone size={24} />
                 </a>
                 <Link
                   to="/contact"

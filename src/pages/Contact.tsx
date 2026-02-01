@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Github, Linkedin, Twitter, Link, Award } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Github, Linkedin, Twitter, Link, Award, Smartphone } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { emailjsConfig } from '../config/emailjs';
 import type { EmailTemplateParams } from '../config/emailjs';
@@ -59,6 +59,11 @@ export const Contact: React.FC = () => {
       name: 'Credly',
       url: 'https://www.credly.com/users/wilson-gayo/badges#credly',
       icon: <Award className="h-5 w-5" />
+    },
+    {
+      name: 'Google Developers',
+      url: 'https://developers.google.com/profile/u/111695751234782502699?utm_source=developer.android.com',
+      icon: <Smartphone className="h-5 w-5" />
     },
     {
       name: 'X',

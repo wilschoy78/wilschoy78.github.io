@@ -66,6 +66,11 @@ export const socialLinks: SocialLink[] = [
     icon: 'award'
   },
   {
+    name: 'Google Developers',
+    url: 'https://developers.google.com/profile/u/111695751234782502699?utm_source=developer.android.com',
+    icon: 'chrome'
+  },
+  {
     name: 'Email',
     url: 'mailto:wilson.gayo@example.com',
     icon: 'mail'

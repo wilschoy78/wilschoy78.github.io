@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Mail, Phone, MapPin, 
-  Printer, Download, Link as LinkIcon, Calendar 
+  Printer, Download, Link as LinkIcon, Calendar, Smartphone 
 } from 'lucide-react';
 import { experience, teachingExperience, education } from '../data/experience';
 
@@ -17,6 +17,7 @@ export const Resume: React.FC = () => {
     website: 'https://wilschoy78.github.io',
     github: 'https://github.com/wilschoy78',
     linkedin: 'https://linkedin.com/in/wilson-gayo',
+    googleDev: 'https://developers.google.com/profile/u/111695751234782502699?utm_source=developer.android.com',
     summary: 'Experienced Software Developer, Educator, and Technology Leader with over 18 years in the industry. Passionate about enterprise software development, teaching, and mentoring the next generation of developers. Specialized in full-stack Java/J2EE and Node.js development.'
   };
 
@@ -98,6 +99,10 @@ export const Resume: React.FC = () => {
               <div className="flex items-center gap-2">
                 <LinkIcon className="w-4 h-4" />
                 <a href={profileInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Portfolio</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Smartphone className="w-4 h-4" />
+                <a href={profileInfo.googleDev} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Google Developer Profile</a>
               </div>
             </div>
           </div>
